@@ -32,7 +32,7 @@ print()
 
 if water == 'yes':
     print()
-    cprint("Hello, Mien hoon jal devta! I will help you drink 3.5 liters of water in 12 hours!", 'blue', attrs=['bold'])
+    cprint("Hello i will help you keep track with water thanks", 'blue', attrs=['bold'])
     cprint("->> You will have to drink ", 'blue', attrs=['bold'],end="")
     print("500 ml",end="")
     cprint(" of water every time I remind you!", 'blue', attrs=['bold'])
@@ -48,7 +48,7 @@ if exercise == 'yes':
     exercise = 'ok'
 
 if twitter == 'yes':
-    print()
+    print("",end="\n")
     cprint("Hello, Mien hoon social minister! I will remind you to check your twitter every", 'green', attrs=['bold'],end=" ")
     print("2 hours!")
     print()
@@ -69,10 +69,6 @@ exercise_count = 0
 twitter_count = 0
 
 while True:
-
-# Water 2 hours - 7200 seconds 7 times
-# Exercise 4 hours - 14400 seconds 2 times
-# Twitter 2 hours - 7200 seconds 5 times
 
     water_a = time.time()
     if (water_a - water_main) >= 296 and (water_a - water_main) <= 300 and water == 'ok':
@@ -119,7 +115,7 @@ while True:
         twitter_main = twitter_a
         twitter_count += 1
         if twitter_count == 5:
-            twitter = 'not ok'
+            twitter = "not ok"
         pygame.mixer.init() 
         pygame.mixer.music.load("twitter.mp3") 
         pygame.mixer.music.set_volume(0.7) 
